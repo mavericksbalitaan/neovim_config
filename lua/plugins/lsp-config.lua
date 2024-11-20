@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "tailwindcss", "pyright" },
+				ensure_installed = { "lua_ls", "ts_ls", "pyright" },
 			})
 		end,
 	},
@@ -26,9 +26,6 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.eslint.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({

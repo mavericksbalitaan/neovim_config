@@ -37,7 +37,7 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "luasnip" },
+					{ name = "luasnip"},
 				}, {
 					{ name = "buffer" },
 				}),
