@@ -1,12 +1,6 @@
 return {
-	{
-		"NvChad/nvim-colorizer.lua",
-		event = "BufReadPre",
-		opts = {
-			-- setup opts
-			user_default_options = {
-				tailwind = true,
-			},
-		},
-	},
+  "catgoose/nvim-colorizer.lua",
+  event = "BufReadPre",
+  opts = { -- set to setup table
+  },
 }

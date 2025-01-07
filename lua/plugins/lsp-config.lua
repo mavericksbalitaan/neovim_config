@@ -14,9 +14,7 @@ return {
           "ts_ls",
           "eslint",
           "pyright",
-          "tailwindcss",
           "emmet_language_server",
-          "sqlls",
         },
       })
     end,
@@ -39,13 +37,7 @@ return {
       lspconfig.pyright.setup({
         capabilities = capabilities,
       })
-      lspconfig.tailwindcss.setup({
-        capabilities = capabilities,
-      })
       lspconfig.emmet_language_server.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.sqlls.setup({
         capabilities = capabilities,
       })
 
