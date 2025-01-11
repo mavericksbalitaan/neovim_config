@@ -6,6 +6,7 @@ return {
 			open_mapping = "<leader>=",
 			direction = "float",
 			auto_scroll = true,
+      autochdir = true,
 			vim.keymap.set("n", "<leader>lt", ":TermSelect<CR>"),
 			vim.keymap.set("n", "<leader>fp", ":2TermExec cmd='prettier % --write' <CR>"),
 		})
