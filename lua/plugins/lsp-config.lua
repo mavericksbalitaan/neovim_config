@@ -13,8 +13,8 @@ return {
           "lua_ls",
           "ts_ls",
           "eslint",
-          "pylsp",
           "emmet_language_server",
+          "pyright"
         },
       })
     end,
@@ -34,10 +34,10 @@ return {
       lspconfig.eslint.setup({
         capabilities = capabilities,
       })
-      lspconfig.pylsp.setup({
+      lspconfig.emmet_language_server.setup({
         capabilities = capabilities,
       })
-      lspconfig.emmet_language_server.setup({
+      lspconfig.pyright.setup({
         capabilities = capabilities,
       })
 
