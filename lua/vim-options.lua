@@ -36,7 +36,6 @@ vim.keymap.set("n", "<silent><S-h>", ":vertical resize +1<CR>")
 vim.keymap.set("n", "<silent><S-l>", ":vertical resize -1<CR>")
 vim.keymap.set("n", "<silent><S-k>", ":resize +1<CR>")
 
-
 -- command mode
 vim.keymap.set("n", "<space>", ":")
 
@@ -54,20 +53,15 @@ vim.opt.clipboard = "unnamedplus"
 
 -- highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
--- close all buffers except the current one
-vim.api.nvim_create_user_command('CloseOthers', function()
-  -- Get the current buffer
-  local current_buf = vim.api.nvim_get_current_buf()
-  -- Delete the current buffer
-  vim.cmd('%bd')
-  -- Reopen the alternate file (if it exists)
-  vim.cmd('e#')
-  -- Delete the alternate file's buffer
-  vim.cmd('bd#')
-end, {})
-vim.keymap.set("n", "<leader>co", ":CloseOthers<CR>", { noremap = true, silent = true, desc = 'Close other buffers' })
+-- opening a new terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+	callback = function()
+		vim.opt.number = false
+		vim.opt.relativenumber = false
+	end,
+})
