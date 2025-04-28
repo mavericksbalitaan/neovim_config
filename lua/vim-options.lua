@@ -65,3 +65,14 @@ vim.api.nvim_create_autocmd("TermOpen", {
 		vim.opt.relativenumber = false
 	end,
 })
+
+-- opening a sh file
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "sh",
+	callback = function()
+		vim.lsp.start({
+			name = "bash-language-server",
+			cmd = { "bash-language-server", "start" },
+		})
+	end,
+})
