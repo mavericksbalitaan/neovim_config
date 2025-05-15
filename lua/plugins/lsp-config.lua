@@ -16,6 +16,7 @@ return {
 					"emmet_language_server",
 					"pyright",
 					"bashls",
+					"tailwindcss",
 				},
 			})
 		end,
@@ -41,7 +42,10 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			lspconfig.bashls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
 
