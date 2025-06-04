@@ -18,5 +18,12 @@ return {
 				ui.nav_file(i)
 			end, { desc = "Harpoon: Go to mark " .. i })
 		end
+
+		vim.keymap.set("n", "<leader>n", ui.nav_next, {
+			desc = "Harpoon: Next mark",
+		})
+		vim.keymap.set("n", "<leader>p", ui.nav_prev, {
+			desc = "Harpoon: Previous mark",
+		})
 	end,
 }
