@@ -18,6 +18,7 @@ return {
 				"prisma",
 				"regex",
 				"bash",
+				"sql",
 			},
 			highlight = {
 				enable = true,
