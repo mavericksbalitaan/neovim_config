@@ -1,3 +1,5 @@
+-- https://github.com/mistweaverco/kulala.nvim
+
 return {
 	{
 		"mistweaverco/kulala.nvim",

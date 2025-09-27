@@ -47,26 +47,19 @@ vim.opt.clipboard = "unnamedplus"
 
 -- highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
--- opening a new terminal
-vim.api.nvim_create_autocmd("TermOpen", {
-  callback = function()
-    vim.opt.number = false
-    vim.opt.relativenumber = false
-  end,
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	desc = "Highlight when yanking (copying) text",
 })
 
 -- opening a sh file
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "sh",
-  callback = function()
-    vim.lsp.start({
-      name = "bash-language-server",
-      cmd = { "bash-language-server", "start" },
-    })
-  end,
+	pattern = "sh",
+	callback = function()
+		vim.lsp.start({
+			name = "bash-language-server",
+			cmd = { "bash-language-server", "start" },
+		})
+	end,
 })
