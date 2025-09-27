@@ -1,7 +1,8 @@
--- https://github.com/catppuccin/nvim
+-- https://github.com/folke/tokyonight.nvim
 
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
+	"folke/tokyonight.nvim",
+	lazy = false,
 	priority = 1000,
+	opts = {},
 }
