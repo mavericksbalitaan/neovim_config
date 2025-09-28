@@ -1,3 +1,4 @@
+vim.cmd("set relativenumber")
 vim.cmd("set encoding=utf-8")
 vim.cmd("set noswapfile")
 vim.cmd("set number")
@@ -21,6 +22,7 @@ vim.keymap.set("n", "<leader><tab>", ":bn<CR>")
 vim.keymap.set("n", "<leader><s-tab>", ":bp<CR>")
 vim.keymap.set("n", "<leader>q", ":qa!<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
+vim.keymap.set("n", "<leader>s", ":e ~/.config/nvim<CR>")
 
 -- resize splits
 vim.keymap.set("n", "<C-h>", ":vertical resize -1<CR>")
@@ -51,15 +53,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 	desc = "Highlight when yanking (copying) text",
-})
-
--- opening a sh file
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "sh",
-	callback = function()
-		vim.lsp.start({
-			name = "bash-language-server",
-			cmd = { "bash-language-server", "start" },
-		})
-	end,
 })

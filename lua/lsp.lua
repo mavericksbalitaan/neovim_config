@@ -2,7 +2,9 @@
 
 -- Enable the LSP server
 vim.lsp.enable({
+	"bashls",
 	"cssls",
+	"emmet-ls",
 	"lua_ls",
 	"sqlls",
 	"tailwindcss",
