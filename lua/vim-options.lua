@@ -22,7 +22,10 @@ vim.keymap.set("n", "<leader><tab>", ":bn<CR>")
 vim.keymap.set("n", "<leader><s-tab>", ":bp<CR>")
 vim.keymap.set("n", "<leader>q", ":qa!<CR>")
 vim.keymap.set("n", "<leader>w", ":bd<CR>")
+
+-- navigate to specific directory
 vim.keymap.set("n", "<leader>s", ":e ~/.config/nvim<CR>")
+vim.keymap.set("n", "<leader>r", ":e ~/repos/<CR>")
 
 -- resize splits
 vim.keymap.set("n", "<C-h>", ":vertical resize -1<CR>")
@@ -54,3 +57,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 	desc = "Highlight when yanking (copying) text",
 })
+
+-- change colors of line numbers
+vim.api.nvim_set_hl(0, "LineNr", { fg = "white" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#458588" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#cc241d" })
