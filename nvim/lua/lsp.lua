@@ -1,15 +1,4 @@
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
-
--- Enable the LSP server
-vim.lsp.enable({
-	"bashls",
-	"cssls",
-	"emmet-ls",
-	"lua_ls",
-	"sqlls",
-	"tailwindcss",
-	"ts_ls",
-})
+vim.lsp.enable("lua_ls")
 
 -- Setup an LspAttach autocommand to enable features based on client capabilities
 -- A single autocommand can work for multiple LSP servers!

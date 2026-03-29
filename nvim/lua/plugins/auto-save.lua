@@ -1,5 +1,3 @@
--- https://github.com/okuuva/auto-save.nvim
-
 return {
 	"okuuva/auto-save.nvim",
 	version = "*",
